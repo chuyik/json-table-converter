@@ -5,7 +5,7 @@ A JavaScript library to convert JSON data to Table.
 
 # Feature
 
-- Convert JSON To &lt;Table /&gt;
+- Convert JSON To &lt;table /&gt;
 
 # Usage
 
@@ -15,17 +15,17 @@ npm install json-table-converter
 
 # API
 ## convertJsonToTable(json, options)
-Convert Json to &lt;Table /&gt;
+Convert Json to &lt;table /&gt;
 
 | Param | Type | Description |
 | --- | --- | --- |
 | json | <code>Object</code> \| <code>Array</code> |  |
 | options | <code>Object</code> |  |
-| [options.tableStyle] | <code>String</code> | &lt;Table/&gt; Style |
-| [options.trStyle] | <code>String</code> | &lt;TR/&gt; Style |
-| [options.tdStyle] | <code>String</code> | &lt;TD/&gt; Style |
-| [options.tdKeyStyle] | <code>String</code> | &lt;TD/&gt; Key Style |
-
+| [options.tableStyle] | <code>String</code> | &lt;table/&gt; Style |
+| [options.trStyle] | <code>String</code> | &lt;tr/&gt; Style |
+| [options.thStyle] | <code>String</code> | &lt;th/&gt; Style |
+| [options.tdStyle] | <code>String</code> | &lt;td/&gt; Style |
+| [options.tdKeyStyle] | <code>String</code> | &lt;td/&gt; Key Style |
 
 # Donation
 

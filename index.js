@@ -4,14 +4,15 @@ const arrayToTable = require('./lib/array-to-table')
 const { isPlainObject } = require('lodash')
 
 /**
- * Convert Json to <Table />
+ * Convert Json to <table />
  * 
  * @param {Object|Array} json
  * @param {Object} options
- * @param {String} [options.tableStyle] <Table/> Style
- * @param {String} [options.trStyle] <TR/> Style
- * @param {String} [options.tdStyle] <TD/> Style
- * @param {String} [options.tdKeyStyle] <TD/> Key Style
+ * @param {String} [options.tableStyle] <table/> Style
+ * @param {String} [options.trStyle] <tr/> Style
+ * @param {String} [options.thStyle] <th/> Style
+ * @param {String} [options.tdStyle] <td/> Style
+ * @param {String} [options.tdKeyStyle] <td/> Key Style
  */
 function convertJsonToTable (json, options) {
   let arr = isPlainObject(json) ? objectToArray(json) : json
