@@ -1,0 +1,35 @@
+{
+  "name": "json-table-converter",
+  "version": "0.1.0",
+  "description": "convert any json to table",
+  "main": "index.js",
+  "scripts": {
+    "bump": "standard-version",
+    "fix": "eslint --fix .",
+    "release": "git push --follow-tags origin master && npm publish",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.jd.com:chuyik/json-table-converter.git"
+  },
+  "keywords": [
+    "convert",
+    "json",
+    "to",
+    "table"
+  ],
+  "author": "zhuyiteng",
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "fs-extra": "^7.0.1",
+    "intelli-espower-loader": "^1.0.1",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^5.2.0",
+    "power-assert": "^1.6.1",
+    "replace": "^1.0.0",
+    "standard-version": "^4.4.0"
+  }
+}
