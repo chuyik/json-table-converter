@@ -14,7 +14,7 @@ const { isPlainObject } = require('lodash')
  * @param {String} [options.tdStyle] <td/> Style
  * @param {String} [options.tdKeyStyle] <td/> Key Style
  */
-function convertJsonToTable (json, options) {
+function jsonToTableHtmlString (json, options) {
   let arr = isPlainObject(json) ? objectToArray(json) : json
 
   if (!Array.isArray(arr)) {
@@ -25,6 +25,6 @@ function convertJsonToTable (json, options) {
 }
 
 module.exports = {
-  convertJsonToTable,
+  jsonToTableHtmlString,
 }
 

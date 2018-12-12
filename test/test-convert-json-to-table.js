@@ -1,5 +1,5 @@
 const path = require('path')
-const { convertJsonToTable } = require('../')
+const { jsonToTableHtmlString } = require('../')
 const { resetDir } = require('./_helper')
 
 let tmpDir = path.join(__dirname, 'tmp')
@@ -27,7 +27,7 @@ let json = [
   },
 ]
 
-describe('convertJsonToTable()', () => {
+describe('jsonToTableHtmlString()', () => {
   before(() => resetDir(tmpDir))
   
   it('should convert json to table', () => {
@@ -35,7 +35,7 @@ describe('convertJsonToTable()', () => {
 
     require('fs').writeFileSync(
       file,
-      convertJsonToTable(json)
+      jsonToTableHtmlString(json)
     )
   })
 })

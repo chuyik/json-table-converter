@@ -14,7 +14,7 @@ npm install json-table-converter
 ```
 
 # API
-## convertJsonToTable(json, options)
+## jsonToTableHtmlString(json, options)
 Convert Json to &lt;table /&gt;
 
 | Param | Type | Description |
