@@ -1,7 +1,6 @@
 const objectToArray = require('./lib/object-to-array')
 const arrayToTable = require('./lib/array-to-table')
-
-const { isPlainObject } = require('lodash')
+const isObject = require('./utils/is-object')
 
 /**
  * Convert Json to <table />
@@ -15,7 +14,7 @@ const { isPlainObject } = require('lodash')
  * @param {String} [options.tdKeyStyle] <td/> Key Style
  */
 function jsonToTableHtmlString (json, options) {
-  let arr = isPlainObject(json) ? objectToArray(json) : json
+  let arr = isObject(json) ? objectToArray(json) : json
 
   if (!Array.isArray(arr)) {
     arr = []
