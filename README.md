@@ -27,6 +27,10 @@ Convert Json to &lt;table /&gt;
 | [options.tdStyle] | <code>String</code> | &lt;td/&gt; Style |
 | [options.tdKeyStyle] | <code>String</code> | &lt;td/&gt; Key Style |
 
+## API Flow Example
+
+<img width="650" src="https://user-images.githubusercontent.com/6262943/49852054-f99b2080-fe1d-11e8-8ae9-4c9ba820f054.jpg" alt="flow">
+
 # Donation
 
 If you find this project useful, you can buy us a cup of coffee:    
