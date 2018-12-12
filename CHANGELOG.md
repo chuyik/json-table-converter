@@ -3,12 +3,12 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
-## [0.1.1](https://git.jd.com/chuyik/json-table-converter/compare/v0.1.0...v0.1.1) (2018-12-12)
+## [0.1.1](https://github.com/chuyik/json-table-converter/compare/v0.1.0...v0.1.1) (2018-12-12)
 
 
 ### Bug Fixes
 
-* remove lodash dep ([485c9ba](https://git.jd.com/chuyik/json-table-converter/commits/485c9ba))
+* remove lodash dep ([485c9ba](https://github.com/chuyik/json-table-converter/commits/485c9ba))
 
 
 
@@ -18,5 +18,5 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* default style ([0545144](https://git.jd.com/chuyik/json-table-converter/commits/0545144))
-* initial commit ([c7ca577](https://git.jd.com/chuyik/json-table-converter/commits/c7ca577))
+* default style ([0545144](https://github.com/chuyik/json-table-converter/commits/0545144))
+* initial commit ([c7ca577](https://github.com/chuyik/json-table-converter/commits/c7ca577))
