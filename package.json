@@ -9,7 +9,7 @@
     "build": "rollup -c",
     "bump": "standard-version",
     "fix": "eslint --fix .",
-    "release": "git push --follow-tags origin master && npm publish",
+    "release": "git push --follow-tags origin master && npm publish --registry=https://registry.npmjs.org",
     "test": "mocha"
   },
   "repository": {
