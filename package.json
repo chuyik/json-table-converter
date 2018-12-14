@@ -1,6 +1,6 @@
 {
   "name": "json-table-converter",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "convert any json to table",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
