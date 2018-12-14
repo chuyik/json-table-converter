@@ -2,8 +2,11 @@
   "name": "json-table-converter",
   "version": "0.1.2",
   "description": "convert any json to table",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "scripts": {
+    "build": "rollup -c",
     "bump": "standard-version",
     "fix": "eslint --fix .",
     "release": "git push --follow-tags origin master && npm publish",
@@ -23,6 +26,8 @@
   "license": "GPL-3.0",
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "eslint": "^5.10.0",
     "fs-extra": "^7.0.1",
     "intelli-espower-loader": "^1.0.1",
@@ -30,6 +35,10 @@
     "mocha": "^5.2.0",
     "power-assert": "^1.6.1",
     "replace": "^1.0.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.1.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
     "standard-version": "^4.4.0"
   }
 }

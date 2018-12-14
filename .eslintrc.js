@@ -9,6 +9,7 @@ module.exports = {
     'linebreak-style': [2, 'unix'],
     quotes: [2, 'single'],
     semi: [2, 'never'],
+    'quote-props': [2, 'as-needed'],
   },
   "parserOptions": {
     "ecmaVersion": 2017

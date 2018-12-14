@@ -1,5 +1,5 @@
 const path = require('path')
-const { jsonToTableHtmlString } = require('../')
+const { jsonToTableHtmlString } = require('../src')
 const { resetDir } = require('./_helper')
 
 let tmpDir = path.join(__dirname, 'tmp')
