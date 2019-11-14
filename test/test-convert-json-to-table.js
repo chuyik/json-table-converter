@@ -29,5 +29,11 @@ describe('jsonToTableHtmlString()', () => {
     expect(jsonToTableHtmlString(json)).toMatchSnapshot()
   })
 
+  it('should format cell', () => {
+    expect(jsonToTableHtmlString(json, {
+      formatCell (value, key) {
+        return key ? value.toUpperCase() : (value  || '')
+      }
+    })).toMatchSnapshot()
   })
 })

@@ -26,10 +26,24 @@ Convert Json to &lt;table /&gt;
 | [options.thStyle] | <code>String</code> | &lt;th/&gt; Style |
 | [options.tdStyle] | <code>String</code> | &lt;td/&gt; Style |
 | [options.tdKeyStyle] | <code>String</code> | &lt;td/&gt; Key Style |
+| [options.formatCell] | <code>Function</code> | Cell Value Format Function |
 
 ### API Flow Example
 
 <img src="https://storage.360buyimg.com/mtd/home/artboard-1-1544598367579.jpg" alt="flow">
+
+### Demo
+```js
+const { jsonToTableHtmlString } = require('json-table-converter')
+const html = jsonToTableHtmlString(json, {
+  tableStyle: string, // <table/> Style
+  trStyle: string,    // <tr/> Style
+  thStyle: string,    // <th/> Style
+  tdStyle: string,    // <td/> Style
+  tdKeyStyle: string, // <td/> Key Style
+  formatCell: (cellValue, isKeyCell) => newCellValue,
+})
+```
 
 # Donation
 

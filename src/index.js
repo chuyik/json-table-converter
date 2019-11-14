@@ -12,6 +12,7 @@ const isObject = require('./utils/is-object')
  * @param {String} [options.thStyle] <th/> Style
  * @param {String} [options.tdStyle] <td/> Style
  * @param {String} [options.tdKeyStyle] <td/> Key Style
+ * @param {Function} [options.formatCell] Cell Value Format Function
  */
 function jsonToTableHtmlString (json, options) {
   let arr = isObject(json) ? objectToArray(json) : json
