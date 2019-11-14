@@ -7,11 +7,11 @@ const defaultThStyle = 'background: #F6F4F0;' + defaultTdStyle
 const defaultTrStyle = ''
 
 function getTableStyle(tableStyle, tableDepth) {
-  return `${tableDepth > 1 ? 'width: 100%;' : ''}${tableStyle}`.replace(/\n\s*/g, '')
+  return `${tableDepth > 1 ? 'width: 100%;' : ''};${tableStyle}`.replace(/\n\s*/g, '')
 }
 
 function getTdStyle (tdStyle, tdKeyStyle, isKey) {
-  return `${isKey ? tdKeyStyle : ''}${tdStyle}`.replace(/\n\s*/g, '')
+  return `${isKey ? tdKeyStyle : ''};${tdStyle}`.replace(/\n\s*/g, '')
 }
 
 function getThStyle (thStyle) {
@@ -23,8 +23,14 @@ function tableToHtml (fields, rows, tableDepth, {
   trStyle = defaultTrStyle,
   thStyle = defaultThStyle,
   tdKeyStyle = defaultTdKeyStyle,
-  tdStyle = defaultTdStyle
+  tdStyle = defaultTdStyle,
+  sortFunction = undefined,
+  nameMap = undefined
 } = {}) {
+  if(typeof sortFunction === 'function') {
+    rows.sort(sortFunction)
+  }
+  var hasValidNameMap = isObject(nameMap) ? true : false;
   return `<table cellspacing="0" style="${getTableStyle(tableStyle, tableDepth)}">
   <thead>${fields
     .filter(f => !f.startsWith('$_'))
@@ -37,7 +43,7 @@ function tableToHtml (fields, rows, tableDepth, {
         const v = row[i] || ''
         if (isObject(v)) {
           tds += `<td style="${getTdStyle(tdStyle, tdKeyStyle, v.isKey)}">${
-            v.value
+            v.isKey ? (hasValidNameMap && v.value in nameMap ? nameMap[v.value] : v.value) : (v.value ? v.value : "")
           }</td>`
         } else {
           tds += `<td style="${getTdStyle(tdStyle)}">${v}</td>`
