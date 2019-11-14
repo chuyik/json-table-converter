@@ -10,7 +10,7 @@
     "bump": "standard-version",
     "fix": "eslint --fix .",
     "release": "git push --follow-tags origin master && npm publish --registry=https://registry.npmjs.org",
-    "test": "mocha"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,19 +26,16 @@
   "license": "GPL-3.0",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "eslint": "^5.10.0",
-    "fs-extra": "^7.0.1",
-    "intelli-espower-loader": "^1.0.1",
-    "jsdoc-to-markdown": "^4.0.1",
-    "mocha": "^5.2.0",
-    "power-assert": "^1.6.1",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "eslint": "^6.6.0",
+    "fs-extra": "^8.1.0",
+    "jest": "^24.9.0",
     "replace": "^1.0.0",
-    "rollup": "^0.67.4",
-    "rollup-plugin-babel": "^4.1.0",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "standard-version": "^4.4.0"
+    "rollup": "^1.27.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "standard-version": "^7.0.0"
   }
 }

@@ -1,10 +1,6 @@
-const path = require('path')
 const { jsonToTableHtmlString } = require('../src')
-const { resetDir } = require('./_helper')
 
-let tmpDir = path.join(__dirname, 'tmp')
-
-let json = [
+const json = [
   {
     cacheKey: 'API_CACHE',
     report: {
@@ -28,14 +24,10 @@ let json = [
 ]
 
 describe('jsonToTableHtmlString()', () => {
-  before(() => resetDir(tmpDir))
   
   it('should convert json to table', () => {
-    let file = path.join(tmpDir, 'table.html')
+    expect(jsonToTableHtmlString(json)).toMatchSnapshot()
+  })
 
-    require('fs').writeFileSync(
-      file,
-      jsonToTableHtmlString(json)
-    )
   })
 })
